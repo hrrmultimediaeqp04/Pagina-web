@@ -98,7 +98,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     height: 500px;
     margin-top: 40px;
    /*  padding: 0 67px; */
@@ -116,9 +116,10 @@ header{
     font-family: monospace;
     text-align: center;
     color: #ffffff89;
-    font-size: 70px;
+    font-size: 65px;
 }
 .txt p{
+    padding: 0 70px;
     text-align: center;
     color: #ffffff50;
     margin-top: 29px;
@@ -126,7 +127,7 @@ header{
 }
 
 .boton{
-    margin-top: -100px;
+    margin-top: -85px;
    /*  background-color: aquamarine; */
     height: 30%;
 /*     display: flex;
@@ -144,7 +145,7 @@ header button{
     color: #ffffff;
     display: flex;
     font-size: 18px;
-    padding: 4px;
+    padding: 1px;
     cursor: pointer;
     transition: .3s;
     margin: 20px 9px;
@@ -198,3 +199,114 @@ button:active{
     width: 70%;
     height: 90%;
 }
+
+
+@media (width < 915px){
+    .menu-contenedor{
+        padding: 30px;
+        margin: 0 50px;
+    }
+    .menu-contenedor label{
+        display: initial;
+    }
+    .menu-contenedor .enlace{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .enlace{
+        display: initial;
+    }
+    .titulo{
+        width: 90%;
+    }
+    .titulo .txt h1{
+        font-size: 60px;
+    }
+    .titulo .txt p{
+        font-size: 15px;
+    }
+    .titulo .boton{
+        margin-top: -80px;
+    }
+    .boton button{
+        height: 40px ;
+    
+    }
+    button span{
+        font-size: 15px;
+
+    }
+}
+@media (width < 655px){
+    .menu-contenedor{
+        padding: 30px;
+    }
+    .menu-contenedor label{
+        display: initial;
+    }
+    .menu-contenedor .enlace{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .enlace{
+        display: initial;
+    }
+    .titulo{
+        width: 90%;
+    }
+
+    .titulo .txt p{
+        padding: 0;
+        font-size: 17px;
+    }
+    .titulo .boton{
+        margin-top: -40px;
+    }
+
+}
+@media (width < 474px){
+    .menu-contenedor{
+        padding: 30px;
+        margin: 0 10px;
+    }
+    .titulo{
+        width: 90%;
+    }
+    .titulo .txt h1{
+        font-size: 45px;
+    }
+    .titulo .txt p{
+        font-size: 14px;
+    }
+    .boton button{
+        height: 30px ;
+    
+    }
+    button span{
+        font-size: 10px;
+
+    }
+    .titulo .boton{
+        margin-top: -80px;
+    }
+
+}
+/* @media (width > 895px){
+    .boton{
+        margin-top: 0;
+    }
+} */
