@@ -5,7 +5,7 @@
     font-family: 'Baloo 2', cursive;
     text-decoration: none;
     list-style: none;
-    background-color: rgb(94, 94, 94);
+    background-color: rgb(18, 18, 18);
 
 }
 header{
@@ -58,6 +58,7 @@ header{
 }
 
 section {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,6 +399,8 @@ z-index: 10;
 
 
 .footer {
+    margin-top: 20px;
+    border-top: #5e5e5e 5px solid;
     position: relative;
     background: transparent;
     min-height: 100px;

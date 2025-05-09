@@ -1,0 +1,236 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.menu-contenedor{
+    margin: 0px 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    color: #fff;
+    font-size: 25px;
+
+}
+.menu-contenedor .enlace ul li{
+    position: relative;
+    float: left;
+}
+.menu-contenedor .enlace ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+.menu-contenedor .enlace ul li a:hover{
+    color: #001aff;
+}
+#menu{
+    display: none;
+}
+.icono-menu{
+    width: 25px;
+}
+.menu-contenedor label{
+    cursor: pointer;
+    display: none;
+}
+
+header{
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../Pagina-web/img/fondo\ realidad.jpg) 100% / cover no-repeat ;
+}
+.custom-shape-divider-bottom-1746730356 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-1746730552 svg {
+    position: relative;
+    display: block;
+    width: calc(139% + 1.3px);
+    height: 155px;
+    background-color: #FFF;
+}
+
+.pg{
+    width: 90%;
+    text-align: center;
+}
+
+.pg h1{
+    color: #ffffff89;
+    font-size: 120px;
+    margin-top: -20px;
+}
+.pg h2{
+    color: #ffffff50;
+    text-align: center;
+    font-size: 60px;
+    margin-top: -20px;
+    font-weight: 300;
+}
+main{
+    padding: 10px;
+
+     
+    margin: 80px;
+}
+.presentacio{
+    margin: 150px auto;
+    width: 70%;
+}
+.image{
+    max-width: 320px;
+    float: left;
+    border: 3px solid rgb(255, 0, 255);
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.text{
+    color: #000000;
+}
+.text h1{
+    font-size: 52px;
+}
+text p{
+    font-size: 20px;
+}
+
+
+section{
+   
+        padding: 10px;
+    margin: 80px;
+    text-align: center;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @media (width < 915px){
+    .menu-contenedor{
+        padding: 15px;
+    }
+    .menu-contenedor label{
+        display: initial;
+    }
+    .menu-contenedor .enlace{
+        position: absolute;
+        z-index: 50;
+        top: 100%;
+        left: 50;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .enlace{
+        display: initial;
+    }
+
+
+    header{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .pg h1{
+        font-size: 70px;
+         text-align: center;
+    }
+
+
+
+}
+
+
+    @media (max-width: 655px) {
+    .custom-shape-divider-bottom-1746731192 svg {
+        width: calc(143% + 1.3px);
+        height: 146px;
+    }
+        .menu-contenedor{
+        padding: 15px;
+        
+    }
+    .menu-contenedor label{
+        display: initial;
+    }
+    .menu-contenedor .enlace{
+        position: absolute;
+        top: 100%;
+        left: 50;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .enlace{
+        display: initial;
+    }
+    
+}
+  @media (width < 474px){
+        .menu-contenedor{
+        padding: 15px;
+        margin: 0 10px;
+       
+    }
+
+    header{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pg h1{
+        font-size: 60px;
+      text-align: center;
+    }
+    .pg h2{
+        margin-top: 5px;
+        font-size: 40px;
+    }
+
+}
+  
