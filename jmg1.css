@@ -7,8 +7,8 @@
     
 }
 
-.menu-contenedor{
-    margin: 0px 45px;
+.menu-contenedor {
+    margin: 0 90px;
     position: absolute;
     top: 0;
     right: 0;
@@ -17,42 +17,59 @@
     align-items: center;
     justify-content: space-between;
 }
-.logo{
-    color: #fff;
-    font-size: 25px;
-
+.logo img {
+    width: 100px;
 }
-.menu-contenedor .enlace ul li{
+.menu-contenedor .enlace ul li {
     position: relative;
     float: left;
 }
-.menu-contenedor .enlace ul li a{
+.menu-contenedor .enlace ul li a {
     font-size: 18px;
     padding: 20px;
     color: #fff;
     display: block;
 }
-.menu-contenedor .enlace ul li a:hover{
+.menu-contenedor .enlace ul li a:hover {
     color: #001aff;
 }
-#menu{
+#menu {
     display: none;
 }
-.icono-menu{
+.icono-menu {
     width: 25px;
 }
-.menu-contenedor label{
+.menu-contenedor label {
     cursor: pointer;
     display: none;
 }
 
+/* MENÚ DESPLEGABLE EN ESCRITORIO */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    background: #000;
+    display: none;
+    min-width: 180px;
+    z-index: 99;
+}
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+}
+.menu-contenedor .enlace ul li ul li {
+    position: relative;
+}
+.menu-contenedor .enlace ul li ul li ul {
+    left: 100%;
+    top: 0;
+}
 header{
     background-position: center bottom;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../Pagina-web/img/contexto\ multimedia.avif) 100% / cover no-repeat ;
+
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../Pagina-web/img-edw/istockphoto-517188688-612x612.jpg) 100% / cover no-repeat ;
 }
 .custom-shape-divider-bottom-1746730356 {
     position: absolute;
@@ -246,7 +263,7 @@ section .tipo_video{
     margin-top: 20px;
     border-top: #5e5e5e 5px solid;
     position: relative;
-    background-color: rgb(18, 18, 18);
+        background-color: #286bcfa5;
     min-height: 100px;
     padding: 20px 50px;
     display: flex;

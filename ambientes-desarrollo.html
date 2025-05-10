@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ambientes de Desarrollo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+     header{
+    position: sticky;
+    z-index: 90;
+    top: 0;
+     background-color:  #264653;
+    width: 100%;
+    height: 155px;
+   
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-contenedor {
+    margin: 0 90px;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu-contenedor .enlace ul li {
+    position: relative;
+    float: left;
+}
+
+.menu-contenedor .enlace ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+.menu-contenedor .enlace ul li a:hover {
+    color: #001aff;
+}
+
+#menu {
+    display: none;
+}
+
+.icono-menu {
+    width: 25px;
+}
+
+.menu-contenedor label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Submenús */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background: #222;
+    z-index: 100;
+}
+
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+}
+
+.menu-contenedor .enlace ul li ul li {
+    width: 200px;
+     left: 50px;
+}
+
+.menu-contenedor .enlace ul li ul li a {
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 915px) {
+    .menu-contenedor {
+        padding: 30px;
+        margin: 0 50px;
+    }
+
+    .menu-contenedor label {
+        display: initial;
+    }
+
+    .menu-contenedor .enlace {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        z-index: 99;
+    }
+
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+        float: none;
+    }
+
+    #menu:checked ~ .enlace {
+        display: block;
+    }
+
+    .menu-contenedor .enlace ul li ul {
+        position: relative;
+    }
+
+    .menu-contenedor .enlace ul li:hover > ul {
+        display: none;
+    }
+
+    .menu-contenedor .enlace ul li ul {
+        display: block;
+    }
+}
+
+    .titulo{
+      background-color: transparent;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      margin-top: 40px;
+      color: #fff;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .cards-3 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: #fefefe;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 2rem;
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #2a9d8f;
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 20px;
+    }
+
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background: #2a9d8f;
+      border-radius: 50%;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem;
+      }
+    }
+    
+.footer {
+    margin-top: 20px;
+    background-color:  #264653;
+    border-top: #5e5e5e 5px solid;
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  </style>
+</head>
+<body>
+    <header>
+      <div class="menu-contenedor">
+ <a href="../Pagina-web/index.html" class="logo"><img src="../Pagina-web/img-edw/logo.png" alt="Logo"></a>            <input type="checkbox" id="menu"/>
+    <label for="menu">
+        <img src="img/menu.png" class="icono-menu" alt="Menú">
+    </label>
+    <nav class="enlace">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Unidades</a>
+                <ul>
+                    <li><a href="#">Unidad 1</a>
+                                                       <ul>
+                                    <li><a href="../Pagina-web/formato-eqp.html">Tipos de formato</a></li>
+                                    <li><a href="../Pagina-web/hola.html">La web en la multimedia</a></li>
+                                    <li><a href="../Pagina-web/linea-multi.html">Evolucion de la multimedia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 2</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/edicion.html">Herramientas de edicion</a></li>
+                                    <li><a href="../Pagina-web/ambientes-desarrollo.html">Ambientes de desarrollo</a></li>
+                                    <li><a href="../Pagina-web/desarrollo_herramientas.html">Desarrollo de herramientas </a></li>
+                                </ul>
+                    </li>
+                    <li><a href="#">Unidad 3</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a></li>
+                            <li><a href="#">Unidad 2</a></li>
+                            <li><a href="#">Unidad 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Extras</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="titulo">
+  <h1>Ambientes de Desarrollo</h1>
+  <p>Explora los espacios donde el software cobra vida</p>
+</div>
+</header>
+
+
+
+<main>
+
+  <section>
+    <h2>¿Qué es un Ambiente de Desarrollo?</h2>
+    <p>Un ambiente de desarrollo es el ecosistema técnico donde los desarrolladores crean, prueban y validan aplicaciones. Está compuesto por hardware, software, configuraciones, frameworks y herramientas que permiten la productividad y el control de calidad durante el ciclo de vida del software.</p>
+  </section>
+
+  <section>
+    <h2>Tipos de Ambientes</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <h3>1. Desarrollo</h3>
+        <p>Donde los programadores escriben y prueban el código en sus máquinas locales o servidores internos.</p>
+      </div>
+      <div class="timeline-event">
+        <h3>2. Pruebas</h3>
+        <p>Ambiente separado para validar que la aplicación funcione correctamente antes de ser liberada.</p>
+      </div>
+      <div class="timeline-event">
+        <h3>3. Staging (Preproducción)</h3>
+        <p>Simula el ambiente real para asegurar que todo esté listo antes del lanzamiento.</p>
+      </div>
+      <div class="timeline-event">
+        <h3>4. Producción</h3>
+        <p>Ambiente en vivo donde los usuarios finales interactúan con el sistema.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>IDE - Entorno de Desarrollo Integrado</h2>
+    <div class="grid cards-3">
+      <div class="card">
+        <h3>Editor de Código</h3>
+        <p>Permite escribir código con resaltado de sintaxis y estructuras organizadas.</p>
+      </div>
+      <div class="card">
+        <h3>Autocompletado</h3>
+        <p>Sugiere funciones, variables y estructuras para acelerar el desarrollo.</p>
+      </div>
+      <div class="card">
+        <h3>Compilador</h3>
+        <p>Traduce el código fuente a un lenguaje que la máquina puede ejecutar.</p>
+      </div>
+      <div class="card">
+        <h3>Depurador</h3>
+        <p>Permite encontrar y corregir errores en tiempo de ejecución.</p>
+      </div>
+      <div class="card">
+        <h3>Gestor de Versiones</h3>
+        <p>Controla los cambios del código, permitiendo trabajar en equipo (Git, SVN).</p>
+      </div>
+      <div class="card">
+        <h3>Automatización</h3>
+        <p>Ejecuta tareas como pruebas, construcción y despliegue automáticamente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Galería: Herramientas Comunes</h2>
+    <div class="gallery">
+      <img src="../Pagina-web/img/visual-basico.png" alt="VSCode" />
+      <img src="../Pagina-web/img-edw/intelli.png" alt="IntelliJ IDEA" />
+      <img src="../Pagina-web/img-edw/eclip.png" alt="Eclipse" />
+      <img src="../Pagina-web/img-edw/Android_Studio_Icon_3.6.svg.png" alt="Android Studio" />
+    </div>
+  </section>
+
+</main>
+
+ <footer class="footer">
+    <ul class="social-icon">
+        <li class="icon-elem">
+            <a href="#F" class="icon">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </li>
+        <li class="icon-elem">
+            <a href="#X" class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <li class="icon-elem">
+                <a href="#IG" class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    </ul>
+    <ul class="menu">
+        <li class="menu-elem">
+            <a href="../Pagina-web/index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="../Pagina-web/colaboradores.html" class="menu-icon">Colaboradores</a>
+        </li>
+        <li class="menu-elem">
+            <a href="#contact" class="menu-icon">Contacto</a>
+        </li>
+    </ul>
+    <p class="text">@2025 | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

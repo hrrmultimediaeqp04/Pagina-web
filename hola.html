@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../Pagina-web/unidad1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>PILARES - 16 de Septiembre</title>
+  <style>
+    *{
+        list-style: none;
+        text-decoration: none;
+
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+    }
+
+.menu-contenedor {
+    margin: 0 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    width: 100px;
+}
+.menu-contenedor .enlace ul li {
+    position: relative;
+    float: left;
+}
+.menu-contenedor .enlace ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+.menu-contenedor .enlace ul li a:hover {
+    color: #001aff;
+}
+#menu {
+    display: none;
+}
+.icono-menu {
+    width: 25px;
+}
+.menu-contenedor label {
+    cursor: pointer;
+    display: none;
+}
+
+/* MENÚ DESPLEGABLE EN ESCRITORIO */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    background: #000;
+    display: none;
+    min-width: 180px;
+    z-index: 99;
+}
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+}
+.menu-contenedor .enlace ul li ul li {
+    position: relative;
+}
+.menu-contenedor .enlace ul li ul li ul {
+    left: 100%;
+    top: 0;
+}
+header{
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../Pagina-web/img-edw/Cabecera\ Multimedia\ e\ interculturalidad.png) 100% / cover no-repeat ;
+}
+.custom-shape-divider-bottom-1746730356 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-1746730552 svg {
+    position: relative;
+    display: block;
+    width: calc(139% + 1.3px);
+    height: 155px;
+    background-color: #FFF;
+}
+
+.pg{
+    width: 90%;
+    text-align: center;
+}
+
+.pg h1{
+    color: #ffffff89;
+    font-size: 150px;
+    margin-top: -20px;
+}
+.pg h2{
+    color: #ffffff50;
+    text-align: center;
+    font-size: 60px;
+    margin-top: -20px;
+    font-weight: 300;
+}
+main{
+ /*    background-color: #cc00ff; */
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 40px 130px;
+/*     border: #286bcf solid 2px;
+ */}
+.multimedia{
+    width: 50%;
+    height: 70%;
+    font-size: 30px;
+    padding: 40px 40px;
+}
+.multimedia h1{
+    margin-bottom: 30px;
+}
+.m_img{
+    width: 50%;
+    height: 100%;
+    margin-top: 20vh;
+}
+.m_img img{
+    width: 100%;
+}
+
+
+
+
+    .seccion {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 5%;
+      border-bottom: 1px solid #333;
+    }
+
+    .seccion img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .texto {
+      max-width: 500px;
+    }
+
+    .texto h3 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .texto p {
+      text-align: justify;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    @media screen and (max-width: 768px) {
+      .seccion {
+        flex-direction: column;
+        text-align: center;
+      }
+      .texto {
+        max-width: 100%;
+      }
+    }
+    
+.footer {
+    margin-top: 20px;
+    border-top: #5e5e5e 5px solid;
+    position: relative;
+    background-color: rgb(18, 18, 18);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+
+  </style>
+</head>
+<body>
+        <header>
+<div class="menu-contenedor">
+ <a href="../Pagina-web/index.html" class="logo"><img src="../Pagina-web/img-edw/logo.png" alt="Logo"></a>            <input type="checkbox" id="menu"/>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="img/menu.png" class="icono-menu" alt="Menú">
+            </label>
+            <nav class="enlace">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Unidades</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a>
+                                                                <ul>
+                                    <li><a href="../Pagina-web/formato-eqp.html">Tipos de formato</a></li>
+                                    <li><a href="../Pagina-web/hola.html">La web en la multimedia</a></li>
+                                    <li><a href="../Pagina-web/linea-multi.html">Evolucion de la multimedia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 2</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/edicion.html">Herramientas de edicion</a></li>
+                                    <li><a href="../Pagina-web/ambientes-desarrollo.html">Ambientes de desarrollo</a></li>
+                                    <li><a href="../Pagina-web/desarrollo_herramientas.html">Desarrollo de herramientas </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 3</a>
+                                <ul>
+                                    <li><a href="#">Unidad 1</a></li>
+                                    <li><a href="#">Unidad 2</a></li>
+                                    <li><a href="#">Unidad 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pg">
+        <h1>La web en la multimedia</h1>
+        <h2></h2>
+    </div>
+
+    <div class="custom-shape-divider-bottom-1746730356">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"  fill="white"></path>
+    </svg>
+</div>
+
+</header>
+
+  <section class="seccion">
+    <img src=".//img-edw/1.jpeg" alt="Ciberescuelas">
+    <div class="texto">
+      <h3>La web en la multimedia</h3>
+    <p>La web en la multimedia se refiere a la 
+integración de diferentes tipos de contenido 
+multimedia en entornos web. Esto incluye 
+imágenes, audio, video, animaciones e 
+interactividad a través de tecnologías web.</p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="texto">
+      <h3>Importancia en la Experiencia de Usuario</h3>
+<p>➢ Accesibilidad: Uso de subtítulos, transcripciones y descripciones para 
+contenido multimedia. <br>
+➢ Optimización: Compresión de archivos multimedia para mejorar el 
+rendimiento web. <br>
+➢ SEO: Uso de etiquetas ALT en imágenes y metadata en videos para mejorar la 
+visibilidad en buscadores. <br>
+➢ Interactividad: Mejora el engagement con el usuario mediante animaciones y 
+contenido dinámico.</p>
+    </div>
+    <img src=".//img-edw/2.png">
+  </section>
+
+  <section class="seccion">
+    <img src=".//img-edw/3.jpg" alt="Deporte">
+    <div class="texto">
+      <h3>Aplicaciones en la Web</h3>
+<p>➢ Redes sociales: Uso intensivo de imágenes, videos y transmisiones en vivo. <br>
+➢ E-learning: Plataformas educativas con videos interactivos y simulaciones. <br>
+➢ Streaming: Servicios como YouTube, Netflix y Twitch dependen de tecnologías 
+multimedia. <br>
+➢ Publicidad: Anuncios interactivos, banners animados y contenido audiovisual. <br>
+➢ Realidad Virtual y Aumentada: Aplicaciones web para experiencias 
+inmersivas.</p>
+    </div>
+  </section>
+    <section class="seccion">
+    <div class="texto">
+      <h3>Tendencias Actuales</h3>
+<p>➢ Streaming de baja latencia: Uso de protocolos como WebRTC y HLS. <br>
+➢ Realidad Aumentada en la Web (WebAR): Integración de AR sin necesidad de 
+aplicaciones externas. <br>
+➢ Gráficos en 3D con WebGL: Mayor uso en videojuegos y visualización de 
+datos. <br>
+➢ Inteligencia Artificial en multimedia: Algoritmos para mejorar la 
+personalización de contenido.</p>
+    </div>
+    <img src=".//img-edw/4.jpg">
+  </section>
+  
+
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="#F" class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="#X" class="icon">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <li class="icon-elem">
+                    <a href="#IG" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="../Pagina-web/index.html" class="menu-icon">Inicio</a>
+            </li>
+            <li class="menu-elem">
+                <a href="../Pagina-web/colaboradores.html" class="menu-icon">Colaboradores</a>
+            </li>
+            <li class="menu-elem">
+                <a href="#contact" class="menu-icon">Contacto</a>
+            </li>
+        </ul>
+        <p class="text">@2025 | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

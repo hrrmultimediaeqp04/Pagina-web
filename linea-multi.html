@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+      <link rel="stylesheet" href="../Pagina-web/unidad1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Línea de Tiempo: Computación Multimedia</title>
+  <style>
+    *{
+        text-decoration: none;
+        list-style: none;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+
+.menu-contenedor {
+    margin: 0 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    width: 100px;
+}
+.menu-contenedor .enlace ul li {
+    position: relative;
+    float: left;
+}
+.menu-contenedor .enlace ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+.menu-contenedor .enlace ul li a:hover {
+    color: #001aff;
+}
+#menu {
+    display: none;
+}
+.icono-menu {
+    width: 25px;
+}
+.menu-contenedor label {
+    cursor: pointer;
+    display: none;
+}
+
+/* MENÚ DESPLEGABLE EN ESCRITORIO */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    background: #000;
+    display: none;
+    min-width: 120px;
+    z-index: 99;
+}
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+}
+.menu-contenedor .enlace ul li ul li {
+    position: relative;
+}
+.menu-contenedor .enlace ul li ul li ul {
+    left: 100%;
+    top: 0;
+}
+header{
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../Pagina-web/img-edw/linea.png) 100% / cover no-repeat ;
+}
+.custom-shape-divider-bottom-1746730356 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-1746730552 svg {
+    position: relative;
+    display: block;
+    width: calc(139% + 1.3px);
+    height: 155px;
+    background-color: #FFF;
+}
+
+.pg{
+    width: 90%;
+    text-align: center;
+}
+
+.pg h1{
+    color: #ffffff89;
+    font-size: 70px;
+    margin-top: -20px;
+}
+.pg h2{
+    color: #ffffff50;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -10px;
+    font-weight: 300;
+}
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #3498db;
+      transform: translateX(-50%);
+    }
+
+    .event {
+      position: relative;
+      width: 50%;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .event:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .event:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .event::before {
+      content: '';
+      position: absolute;
+      top: 2rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 4px solid #3498db;
+      z-index: 1;
+    }
+
+    .event:nth-child(odd)::before {
+      right: -10px;
+    }
+
+    .event:nth-child(even)::before {
+      left: -10px;
+    }
+
+    .event-content {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .event img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .year {
+      font-size: 1.2rem;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+
+.footer {
+    margin-top: 20px;
+    border-top: #5e5e5e 5px solid;
+    position: relative;
+    background-color: rgb(18, 18, 18);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+
+
+    @media (max-width: 768px) {
+      .event {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        margin-left: 0 !important;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .event::before {
+        left: 6px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+    <header>
+<div class="menu-contenedor">
+ <a href="../Pagina-web/index.html" class="logo"><img src="../Pagina-web/img-edw/logo.png" alt="Logo"></a>            <input type="checkbox" id="menu"/>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="img/menu.png" class="icono-menu" alt="Menú">
+            </label>
+            <nav class="enlace">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Unidades</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a>
+                                                       <ul>
+                                    <li><a href="../Pagina-web/formato-eqp.html">Tipos de formato</a></li>
+                                    <li><a href="../Pagina-web/hola.html">La web en la multimedia</a></li>
+                                    <li><a href="../Pagina-web/linea-multi.html">Evolucion de la multimedia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 2</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/edicion.html">Herramientas de edicion</a></li>
+                                    <li><a href="../Pagina-web/ambientes-desarrollo.html">Ambientes de desarrollo</a></li>
+                                    <li><a href="../Pagina-web/desarrollo_herramientas.html">Desarrollo de herramientas </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 3</a>
+                                <ul>
+                                    <li><a href="#">Unidad 1</a></li>
+                                    <li><a href="#">Unidad 2</a></li>
+                                    <li><a href="#">Unidad 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Extras</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pg">
+        <h1>Línea de Tiempo: Computación Multimedia</h1>
+        <h2>Desde sus orígenes hasta la era digital actual</h2>
+    </div>
+
+    <div class="custom-shape-divider-bottom-1746730356">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"  fill="white"></path>
+    </svg>
+</div>
+
+</header>
+
+<!--   <header>
+    <h1>Línea de Tiempo: Computación Multimedia</h1>
+    <p>Desde sus orígenes hasta la era digital actual</p>
+  </header>
+ -->
+  <main>
+    <ul class="timeline">
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">1945</div>
+          <h3>La idea del MEMEX</h3>
+          <p>Vannevar Bush propone un sistema para almacenar y enlazar información: el precursor conceptual del hipertexto.</p>
+          <img src="../Pagina-web/img-edw/0.png" alt="MEMEX">
+        </div>
+      </li>
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">1950</div>
+          <h3>Inicio de la Multimedia</h3>
+          <p>Se introducen los transistores que revolucionan la electrónica y sientan bases para dispositivos multimedia.</p>
+          <img src="../Pagina-web/img-edw/02.jpg" alt="Transistor">
+        </div>
+      </li>
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">1965</div>
+          <h3>Nace el Hipertexto</h3>
+          <p>Ted Nelson introduce la idea de enlaces entre textos, permitiendo navegación no lineal.</p>
+          <img src="../Pagina-web/img-edw/03.jpg" alt="Ted Nelson">
+        </div>
+      </li>
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">1980</div>
+          <h3>Apple y la Interfaz Multimedia</h3>
+          <p>Apple lanza Macintosh, integrando gráficos, sonido y una interfaz gráfica amigable.</p>
+          <img src="../Pagina-web/img-edw/04.jpg" alt="Apple Macintosh">
+        </div>
+      </li>
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">1992</div>
+          <h3>CD Multimedia</h3>
+          <p>Los CDs permiten distribuir música, imágenes y video en un solo medio accesible.</p>
+          <img src="../Pagina-web/img-edw/05.jpeg" alt="CD Multimedia">
+        </div>
+      </li>
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">2007</div>
+          <h3>Educación Interactiva</h3>
+          <p>Las aulas integran recursos multimedia como videos, juegos y presentaciones.</p>
+          <img src="../Pagina-web/img-edw/07.jpg" alt="Educación multimedia">
+        </div>
+      </li>
+
+      <li class="event">
+        <div class="event-content">
+          <div class="year">Hoy</div>
+          <h3>Multimedia en todos lados</h3>
+          <p>Desde redes sociales hasta IA, la multimedia es parte esencial de nuestra vida digital.</p>
+          <img src="../Pagina-web/img-edw/08.webp" alt="Smartphone multimedia">
+        </div>
+      </li>
+
+    </ul>
+  </main>
+
+  
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="#F" class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="#X" class="icon">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <li class="icon-elem">
+                    <a href="#IG" class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="../Pagina-web/index.html" class="menu-icon">Inicio</a>
+            </li>
+            <li class="menu-elem">
+                <a href="../Pagina-web/colaboradores.html" class="menu-icon">Colaboradores</a>
+            </li>
+            <li class="menu-elem">
+                <a href="#contact" class="menu-icon">Contacto</a>
+            </li>
+        </ul>
+        <p class="text">@2025 | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

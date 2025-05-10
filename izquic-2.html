@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realidad Virtual</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  background: linear-gradient(to right, #fef9f5, #e0dcd6);
+  color: #3d3d3d;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  
+}
+
+header{
+    position: sticky;
+    z-index: 90;
+    top: 0;
+    background-color: rgb(18, 18, 18);
+    width: 100%;
+    height: 85px;
+   
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-contenedor {
+    margin: 0 90px;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu-contenedor .enlace ul li {
+    position: relative;
+    float: left;
+}
+
+.menu-contenedor .enlace ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+.menu-contenedor .enlace ul li a:hover {
+    color: #001aff;
+}
+
+#menu {
+    display: none;
+}
+
+.icono-menu {
+    width: 25px;
+}
+
+.menu-contenedor label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Submenús */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background: #222;
+    z-index: 100;
+}
+
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+}
+
+.menu-contenedor .enlace ul li ul li {
+    width: 200px;
+     left: 30px;
+}
+
+.menu-contenedor .enlace ul li ul li a {
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 915px) {
+    .menu-contenedor {
+        padding: 30px;
+        margin: 0 50px;
+    }
+
+    .menu-contenedor label {
+        display: initial;
+    }
+
+    .menu-contenedor .enlace {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        z-index: 99;
+    }
+
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+        float: none;
+    }
+
+    #menu:checked ~ .enlace {
+        display: block;
+    }
+
+    .menu-contenedor .enlace ul li ul {
+        position: relative;
+    }
+
+    .menu-contenedor .enlace ul li:hover > ul {
+        display: none;
+    }
+
+    .menu-contenedor .enlace ul li ul {
+        display: block;
+    }
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #5a2b2b;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4em;
+  color: #2f4f4f;
+  margin-top: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.author {
+  font-style: italic;
+  text-align: right;
+  color: #7a7a7a;
+  margin-top: 10px;
+}
+
+a {
+  color: #5a2b2b;
+  text-decoration: none;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: rgb(18, 18, 18);
+    border-top: #5e5e5e 5px solid;
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+
+  </style>
+</head>
+<body>
+    <header>
+      <div class="menu-contenedor">
+ <a href="../Pagina-web/index.html" class="logo"><img src="../Pagina-web/img-edw/logo.png" alt="Logo"></a>            <input type="checkbox" id="menu"/>
+    <label for="menu">
+        <img src="img/menu.png" class="icono-menu" alt="Menú">
+    </label>
+    <nav class="enlace">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Unidades</a>
+                <ul>
+                    <li><a href="#">Unidad 1</a>
+                                                        <ul>
+                                    <li><a href="../Pagina-web/formato-eqp.html">Tipos de formato</a></li>
+                                    <li><a href="../Pagina-web/hola.html">La web en la multimedia</a></li>
+                                    <li><a href="../Pagina-web/linea-multi.html">Evolucion de la multimedia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 2</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/edicion.html">Herramientas de edicion</a></li>
+                                    <li><a href="../Pagina-web/ambientes-desarrollo.html">Ambientes de desarrollo</a></li>
+                                    <li><a href="../Pagina-web/desarrollo_herramientas.html">Desarrollo de herramientas </a></li>
+                                </ul>
+                    </li>
+                    <li><a href="#">Unidad 3</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a></li>
+                            <li><a href="#">Unidad 2</a></li>
+                            <li><a href="#">Unidad 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div>
+
+</header>
+  <div class="container">
+    <h1>Realidad Virtual</h1>
+<h2>¿Qué es la Realidad Virtual?</h2>
+<p>La realidad virtual (RV) permite al usuario sumergirse en entornos simulados mediante dispositivos como cascos o gafas especiales. Desde los años 50, esta tecnología ha evolucionado, incorporando gráficos en 3D, audio, y sensores que captan los movimientos del cuerpo para enriquecer la experiencia.</p>
+
+<img src="../Pagina-web/img/izquic-img1.jpeg" alt="Mujer con gafas VR" class="image">
+
+<h2>Características clave</h2>
+<ul>
+  <li>Inmersión total: El usuario siente que está dentro del entorno.</li>
+  <li>Interactividad: Posibilidad de manipular objetos o realizar acciones.</li>
+  <li>Presencia: Sensación de estar "realmente ahí".</li>
+  <li>Gráficos tridimensionales: Mayor realismo visual.</li>
+  <li>Seguimiento de movimiento: Reflejo en tiempo real de los movimientos del usuario.</li>
+</ul>
+
+<h2>Campos de aplicación</h2>
+<ul>
+  <li>Educación: Simulaciones educativas interactivas.</li>
+  <li>Medicina: Formación quirúrgica y tratamientos terapéuticos.</li>
+  <li>Videojuegos: Experiencias de juego realistas.</li>
+  <li>Arquitectura: Visualización de diseños antes de construir.</li>
+  <li>Cine: Contenido audiovisual inmersivo.</li>
+  <li>Ciencia: Visualización de datos complejos.</li>
+</ul>
+
+<div class="columns">
+  <div class="column">
+    <h2>Ventajas</h2>
+    <ul>
+      <li>Entrenamiento seguro sin riesgo físico.</li>
+      <li>Aprendizaje más atractivo y envolvente.</li>
+      <li>Acceso a entornos inaccesibles (espacio, océano).</li>
+      <li>Desarrollo de habilidades sin necesidad de materiales reales.</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h2>Desventajas</h2>
+    <ul>
+      <li>Alto costo de equipos.</li>
+      <li>Posibles efectos negativos en la salud (mareos, fatiga).</li>
+      <li>Alta dependencia tecnológica.</li>
+      <li>Reducción de interacción social cara a cara.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Resumen presentación 1.1.4</h2>
+<p>El contenido multimedia (audio, texto, imágenes) es esencial para comunicar eficazmente. Formatos como MP3, PNG o JPG son clave en proyectos digitales. Herramientas como PowerPoint, Canva o Audacity facilitan la creación de contenido enriquecido. La realidad virtual representa una evolución de estas herramientas al combinar todos estos elementos en experiencias inmersivas.</p>
+
+<img src="../Pagina-web/img/izquic-img2.jpg" alt="Cirujanos con realidad aumentada" class="image">
+
+
+  </div>
+  <footer class="footer">
+    <ul class="social-icon">
+        <li class="icon-elem">
+            <a href="#F" class="icon">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </li>
+        <li class="icon-elem">
+            <a href="#X" class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <li class="icon-elem">
+                <a href="#IG" class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    </ul>
+    <ul class="menu">
+        <li class="menu-elem">
+            <a href="../Pagina-web/index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="../Pagina-web/colaboradores.html" class="menu-icon">Colaboradores</a>
+        </li>
+        <li class="menu-elem">
+            <a href="#contact" class="menu-icon">Contacto</a>
+        </li>
+    </ul>
+    <p class="text">@2025 | Todos los derechos reservados</p>
+</footer>
+</body>
+</html>

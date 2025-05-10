@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatos Multimedia Elegantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    
+.menu-contenedor {
+    margin: 0 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    width: 100px;
+}
+.menu-contenedor .enlace ul li {
+    position: relative;
+    float: left;
+}
+.menu-contenedor .enlace ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+.menu-contenedor .enlace ul li a:hover {
+    color: #001aff;
+}
+#menu {
+    display: none;
+}
+.icono-menu {
+    width: 25px;
+}
+.menu-contenedor label {
+    cursor: pointer;
+    display: none;
+}
+
+/* MENÚ DESPLEGABLE EN ESCRITORIO */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    background: #000;
+    display: none;
+    min-width: 180px;
+    z-index: 99;
+}
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+}
+.menu-contenedor .enlace ul li ul li {
+    position: relative;
+}
+.menu-contenedor .enlace ul li ul li ul {
+    left: 100%;
+    top: 0;
+}
+header{
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url(../Pagina-web/img/01.jpg) 100% / cover no-repeat ;
+}
+.custom-shape-divider-bottom-1746730356 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-1746730552 svg {
+    position: relative;
+    display: block;
+    width: calc(139% + 1.3px);
+    height: 155px;
+    background-color: #FFF;
+}
+
+.pg{
+    width: 90%;
+    text-align: center;
+}
+
+.pg h1{
+    color: #ffffff89;
+    font-size: 100px;
+    margin-top: -20px;
+}
+.pg h2{
+    color: #ffffff50;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -20px;
+    font-weight: 300;
+}
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #4e54c8;
+    }
+
+    .img-grid, .audio-cards, .video-tiles, .text-list {
+      display: grid;
+      gap: 2rem;
+    }
+
+    /* Imagen */
+    .img-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .img-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .img-card img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .img-card h3 {
+      color: #4e54c8;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Audio */
+    .audio-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .audio-card {
+      display: flex;
+      background: #fff;
+      border-left: 6px solid #ff6f61;
+      padding: 1rem;
+      border-radius: 8px;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .audio-card img {
+      width: 60px;
+    }
+
+    .audio-card h3 {
+      margin: 0;
+      color: #ff6f61;
+    }
+
+    /* Video */
+    .video-tiles {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .video-card {
+      background: #1e1e2f;
+      color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .video-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .video-card h3 {
+      color: #fbd786;
+    }
+
+    /* Texto */
+    .text-list {
+      grid-template-columns: 1fr;
+    }
+
+    .text-item {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-left: 8px solid #4caf50;
+      border-radius: 10px;
+    }
+
+    .text-item h3 {
+      color: #4caf50;
+    }
+
+    footer {
+      background: #4e54c8;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+.footer {
+    margin-top: 20px;
+  background-color: rgb(18, 18, 18);    
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+    @media (max-width: 768px) {
+      .flex-cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+    <header>
+<div class="menu-contenedor">
+ <a href="../Pagina-web/index.html" class="logo"><img src="../Pagina-web/img-edw/logo.png" alt="Logo"></a>            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="img/menu.png" class="icono-menu" alt="Menú">
+            </label>
+            <nav class="enlace">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Unidades</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a>
+                                                  <ul>
+                                    <li><a href="../Pagina-web/formato-eqp.html">Tipos de formato</a></li>
+                                    <li><a href="../Pagina-web/hola.html">La web en la multimedia</a></li>
+                                    <li><a href="../Pagina-web/linea-multi.html">Evolucion de la multimedia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 2</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/edicion.html">Herramientas de edicion</a></li>
+                                    <li><a href="../Pagina-web/ambientes-desarrollo.html">Ambientes de desarrollo</a></li>
+                                    <li><a href="../Pagina-web/desarrollo_herramientas.html">Desarrollo de herramientas </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 3</a>
+                                <ul>
+                                    <li><a href="#">Unidad 1</a></li>
+                                    <li><a href="#">Unidad 2</a></li>
+                                    <li><a href="#">Unidad 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Extras</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="pg">
+        <h1>Formatos Multimedia</h1>
+        <h2>Explora los distintos tipos de formatos usados en medios digitales</h2>
+    </div>
+
+    <div class="custom-shape-divider-bottom-1746730356">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"  fill="white"></path>
+    </svg>
+</div>
+
+</header>
+     <!--  <header>
+      <div class="menu-contenedor">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+    <input type="checkbox" id="menu"/>
+    <label for="menu">
+        <img src="img/menu.png" class="icono-menu" alt="Menú">
+    </label>
+    <nav class="enlace">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Ubicación</a>
+                <ul>
+                    <li><a href="#">Unidad 1</a>
+                        <ul>
+                            <li><a href="#">Sub unidad 1</a></li>
+                            <li><a href="#">Sub unidad 2</a></li>
+                            <li><a href="#">Sub unidad 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Unidad 2</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a></li>
+                            <li><a href="#">Unidad 2</a></li>
+                            <li><a href="#">Unidad 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Unidad 3</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a></li>
+                            <li><a href="#">Unidad 2</a></li>
+                            <li><a href="#">Unidad 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div>
+  <div class="titulo">
+    <h1>Formatos Multimedia</h1>
+    <p>Explora los distintos tipos de formatos usados en medios digitales</p>
+  </div>
+
+</header> -->
+
+ 
+
+  <section>
+    <h2 style=" margin-top: 120px;">Formatos de Imagen</h2>
+    <div class="img-grid">
+      <div class="img-card">
+        <img src="../Pagina-web/img/formato-jpeg.png" alt="JPEG">
+        <h3>JPEG</h3>
+        <p>Compresión con pérdida. Ideal para fotos.</p>
+      </div>
+      <div class="img-card">
+        <img src="img-izquic/hoja.png" alt="PNG">
+        <h3>PNG</h3>
+        <p>Transparencia y sin pérdida de calidad.</p>
+      </div>
+      <div class="img-card">
+        <img src="../Pagina-web/img/pelea.png" alt="TIFF">
+        <h3>TIFF</h3>
+        <p>Alta calidad, usado en impresión profesional.</p>
+      </div>
+      <div class="img-card">
+        <img src="../Pagina-web/img/bmp.png" alt="BMP">
+        <h3>BMP</h3>
+        <p>Sin compresión, gran tamaño de archivo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Formatos de Audio</h2>
+    <div class="audio-cards">
+      <div class="audio-card">
+        <img src="../Pagina-web/img/simbolo-de-formato-de-archivo-mp3.png" alt="MP3">
+        <div>
+          <h3>MP3</h3>
+          <p>Compresión con pérdida. Popular en música.</p>
+        </div>
+      </div>
+      <div class="audio-card">
+        <img src="../Pagina-web/img/wav.png" alt="WAV">
+        <div>
+          <h3>WAV</h3>
+          <p>Alta calidad sin compresión. Usado en estudio.</p>
+        </div>
+      </div>
+      <div class="audio-card">
+        <img src="../Pagina-web/img/simbolo-de-formato-de-archivo-acc.png" alt="AAC">
+        <div>
+          <h3>AAC</h3>
+          <p>Más eficiente que MP3. Usado en Apple/YouTube.</p>
+        </div>
+      </div>
+      <div class="audio-card">
+        <img src="../Pagina-web/img/flac.png" alt="FLAC">
+        <div>
+          <h3>FLAC</h3>
+          <p>Compresión sin pérdida. Ideal para audiófilos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Formatos de Video</h2>
+    <div class="video-tiles">
+      <div class="video-card">
+        <img src="../Pagina-web/img/mp4.png" alt="MP4">
+        <h3>MP4</h3>
+        <p>Formato más común para video. Compatible y ligero.</p>
+      </div>
+      <div class="video-card">
+        <img src="../Pagina-web/img/webp.png" alt="WebM">
+        <h3>WebM</h3>
+        <p>Desarrollado para la web. Usado por YouTube.</p>
+      </div>
+      <div class="video-card">
+        <img src="../Pagina-web/img/archivo-avi.png" alt="AVI">
+        <h3>AVI</h3>
+        <p>Alta calidad pero gran tamaño. Poca compresión.</p>
+      </div>
+      <div class="video-card">
+        <img src="../Pagina-web/img/mkv.png" alt="MKV">
+        <h3>MKV</h3>
+        <p>Contenedor versátil. Admite múltiples pistas y subtítulos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Formatos de Texto</h2>
+    <div class="text-list">
+      <div class="text-item">
+        <h3>DOCX</h3>
+        <p>Usado en Microsoft Word. Permite texto, estilos, tablas y más.</p>
+      </div>
+      <div class="text-item">
+        <h3>TXT</h3>
+        <p>Texto sin formato. Ligero y universal.</p>
+      </div>
+      <div class="text-item">
+        <h3>PDF</h3>
+        <p>Documento portátil. Preserva el formato en cualquier dispositivo.</p>
+      </div>
+      <div class="text-item">
+        <h3>HTML</h3>
+        <p>Lenguaje de marcado usado para crear páginas web.</p>
+      </div>
+    </div>
+  </section>
+
+ 
+ <footer class="footer">
+    <ul class="social-icon">
+        <li class="icon-elem">
+            <a href="#F" class="icon">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </li>
+        <li class="icon-elem">
+            <a href="#X" class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <li class="icon-elem">
+                <a href="#IG" class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    </ul>
+    <ul class="menu">
+        <li class="menu-elem">
+            <a href="../Pagina-web/index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="../Pagina-web/colaboradores.html" class="menu-icon">Colaboradores</a>
+        </li>
+        <li class="menu-elem">
+            <a href="#contact" class="menu-icon">Contacto</a>
+        </li>
+    </ul>
+    <p class="text">@2025 | Todos los derechos reservados</p>
+</footer>
+</body>
+</html>

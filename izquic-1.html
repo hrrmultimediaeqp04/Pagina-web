@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descripción 1.2.1 y 1.2.2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{
+        text-decoration: none;
+        list-style: none;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #e6f4ec, #ffffff);
+      color: #333;
+      
+    }
+    header{
+    position: sticky;
+    z-index: 90;
+    top: 0;
+    background-color: rgb(18, 18, 18);
+    width: 100%;
+    height: 85px;
+    margin-bottom: 60px;
+}
+.menu-contenedor {
+    margin: 0 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu-contenedor .enlace ul li {
+    position: relative;
+    float: left;
+}
+
+.menu-contenedor .enlace ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+}
+
+.menu-contenedor .enlace ul li a:hover {
+    color: #001aff;
+}
+
+#menu {
+    display: none;
+}
+
+.icono-menu {
+    width: 25px;
+}
+
+.menu-contenedor label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Submenús */
+.menu-contenedor .enlace ul li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background: #222;
+    z-index: 100;
+}
+
+.menu-contenedor .enlace ul li:hover > ul {
+    display: block;
+    
+}
+
+.menu-contenedor .enlace ul li ul li {
+    width: 200px;
+    left: 30px;
+}
+
+.menu-contenedor .enlace ul li ul li a {
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 915px) {
+    .menu-contenedor {
+        padding: 30px;
+        margin: 0 50px;
+    }
+
+    .menu-contenedor label {
+        display: initial;
+    }
+
+    .menu-contenedor .enlace {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        z-index: 99;
+    }
+
+    .menu-contenedor .enlace ul li {
+        width: 100%;
+        float: none;
+    }
+
+    #menu:checked ~ .enlace {
+        display: block;
+    }
+
+    .menu-contenedor .enlace ul li ul {
+        position: relative;
+    }
+
+    .menu-contenedor .enlace ul li:hover > ul {
+        display: none;
+    }
+
+    .menu-contenedor .enlace ul li ul {
+        display: block;
+    }
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: #38a169;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #2f855a;
+  margin-top: 30px;
+}
+
+p, li {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #2f855a;
+}
+
+.footer {
+  margin-top: 40px;
+  font-style: italic;
+  color: #38a169;
+  text-align: right;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.images img {
+  height: 70px;
+  object-fit: contain;
+}
+.footer {
+    margin-top: 120px;
+    background-color: rgb(18, 18, 18);
+    border-top: #5e5e5e 5px solid;
+    position: relative;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  </style>
+</head>
+<body>
+    <header>
+    <div class="menu-contenedor">
+ <a href="../Pagina-web/index.html" class="logo"><img src="../Pagina-web/img-edw/logo.png" alt="Logo"></a>            <input type="checkbox" id="menu"/>
+    <label for="menu">
+        <img src="img/menu.png" class="icono-menu" alt="Menú">
+    </label>
+    <nav class="enlace">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Ubicación</a>
+                <ul>
+                    <li><a href="#">Unidad 1</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/formato-eqp.html">Tipos de formato</a></li>
+                                    <li><a href="../Pagina-web/hola.html">La web en la multimedia</a></li>
+                                    <li><a href="../Pagina-web/linea-multi.html">Evolucion de la multimedia</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Unidad 2</a>
+                                <ul>
+                                    <li><a href="../Pagina-web/edicion.html">Herramientas de edicion</a></li>
+                                    <li><a href="../Pagina-web/ambientes-desarrollo.html">Ambientes de desarrollo</a></li>
+                                    <li><a href="../Pagina-web/desarrollo_herramientas.html">Desarrollo de herramientas </a></li>
+                                </ul>
+                    </li>
+                    <li><a href="#">Unidad 3</a>
+                        <ul>
+                            <li><a href="#">Unidad 1</a></li>
+                            <li><a href="#">Unidad 2</a></li>
+                            <li><a href="#">Unidad 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</div>
+</header>
+  <div class="container">
+    <h1>Descripción: 1.2.1 y 1.2.2 Referentes a la presentación que se dio en clase</h1><p>Hoy en día, los recursos digitales como el audio, el texto y las imágenes son indispensables tanto en contextos académicos como personales. Su correcta utilización permite enriquecer la forma en que compartimos y comprendemos información. Este trabajo aborda los formatos más comunes, las funciones que cumplen y algunas herramientas utilizadas para gestionarlos.</p>
+
+<h2>El audio y sus formatos</h2>
+<p>El sonido es clave en la comunicación digital. Se usa en música, clases grabadas, videojuegos y plataformas como Spotify o Audacity. El formato MP3 es ampliamente usado por su buena calidad y tamaño reducido. También existen otros como WAV (mayor calidad y tamaño) y OGG. Personalmente, utilizar grabaciones me ayuda a repasar para exámenes cuando no tengo tiempo de leer.</p>
+
+<h2>El texto: función y estilo</h2>
+<p>Aunque los medios visuales ganan popularidad, el texto sigue siendo esencial para transmitir información clara. Las tipografías influyen mucho en cómo se percibe un mensaje. Arial y Times New Roman son comunes en textos formales; otras como Comic Sans o Montserrat se usan para diseño y presentaciones. Aplicaciones como Google Docs, Word o Canva facilitan la creación y edición colaborativa de documentos.</p>
+
+<h2>Imágenes y sus formatos</h2>
+<p>Las imágenes refuerzan ideas y hacen que los contenidos sean más atractivos. Entre los formatos más conocidos están:</p>
+<ul>
+  <li><span class="highlight">PNG:</span> ideal para imágenes sin fondo y alta calidad.</li>
+  <li><span class="highlight">JPG:</span> útil para fotografías por su bajo peso.</li>
+  <li><span class="highlight">GIF:</span> permite animaciones breves.</li>
+  <li><span class="highlight">SVG:</span> se usa en diseño por su escalabilidad sin pérdida de calidad.</li>
+</ul>
+
+<div class="images">
+  <img src="../Pagina-web/img-izquic/hoja.png" alt="PNG">
+  <img src="../Pagina-web/img-izquic/variante-de-formato-de-archivo-jpg.png" alt="JPG">
+  <img src="../Pagina-web/img-izquic/hoja.png" alt="GIF">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/SVG_Logo.svg" alt="SVG">
+</div>
+
+<p>Herramientas como Photoshop, Canva o PicsArt permiten editar y diseñar imágenes con distintos fines, desde decoración hasta explicación visual, como en infografías. Dominar el uso del audio, texto e imágenes en formatos digitales es clave para una comunicación efectiva. Estas herramientas no solo son útiles en el ámbito escolar, sino también en la vida cotidiana. Aprender a integrarlas correctamente puede mejorar significativamente la calidad del contenido que producimos.</p>
+
+<div class="images">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1024px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop">
+  <img src="../Pagina-web/img/canva-logo.webp" alt="Canva">
+  <img src="../Pagina-web/img/Picsart-Logo (1).png" alt="PicsArt">
+</div>
+  </div>
+  <footer class="footer">
+    <ul class="social-icon">
+        <li class="icon-elem">
+            <a href="#F" class="icon">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </li>
+        <li class="icon-elem">
+            <a href="#X" class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <li class="icon-elem">
+                <a href="#IG" class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    </ul>
+    <ul class="menu">
+        <li class="menu-elem">
+            <a href="../Pagina-web/index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="../Pagina-web/colaboradores.html" class="menu-icon">Colaboradores</a>
+        </li>
+        <li class="menu-elem">
+            <a href="#contact" class="menu-icon">Contacto</a>
+        </li>
+    </ul>
+    <p class="text">@2025 | Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
